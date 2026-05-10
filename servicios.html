@@ -6,82 +6,150 @@
     <title>Airlok | Servicios</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<!-- ===== BARRA SUPERIOR ===== -->
-<nav>
-    <div class="nav-contenedor">
-        <div class="logo">
-    <img src="logotipo.jpeg" alt="Airlok Logo">
-    <span>Airlok</span>
-</div>
-        <div class="menu">
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="contacto.html">Contacto</a>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo-brand">
+            <img src="logotipo.jpeg" alt="Airlok Logo">
+            <div class="logo-text">
+                <span class="main-logo">AIRLOK</span>
+                <span class="sub-logo">TRANSFERENCIA DE GASES Y CRIOGÉNICOS E INDUSTRIALES</span>
+            </div>
+        </a>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="nosotros.html" class="nav-link">Nosotros</a>
+            <a href="servicios.html" class="nav-link active">Servicios</a>
+            <a href="contacto.html" class="nav-link">Contacto</a>
+            <a href="contacto.html" class="btn-nav">COTIZAR AHORA</a>
         </div>
     </div>
 </nav>
 
-<div class="espacio-menu"></div>
+<header class="page-banner">
+    <div class="banner-overlay"></div>
+    <div class="banner-content reveal">
+        <h1>Nuestros <span class="text-accent">Servicios</span></h1>
+        <p>Soluciones integrales en ingeniería criogénica, industrial y medicinal.</p>
+    </div>
+</header>
 
-<!-- ===== SERVICIOS ===== -->
-<section>
-    <h2 class="titulo">Nuestros servicios industriales y medicinales</h2>
+<section class="section-services">
+    <div class="container-services reveal">
+        <div class="grid-services-premium">
+            
+            <div class="card-premium">
+                <img src="foto.jpeg" alt="Manifolds de Oxígeno">
+                <div class="card-body">
+                    <h3>Manifolds de Oxígeno</h3>
+                    <p>Instalación y mantenimiento preventivo/correctivo para garantizar un flujo constante y seguro bajo normativa.</p>
+                    <span class="tag-light">INDUSTRIAL & MEDICINAL</span>
+                </div>
+            </div>
 
-    <div class="servicios">
+            <div class="card-premium">
+                <img src="airlok 2.jpeg" alt="Redes de Gases">
+                <div class="card-body">
+                    <h3>Redes de Gases</h3>
+                    <p>Diseño y montaje de redes para Oxígeno, CO2, Nitrógeno y Argón con materiales de alta resistencia.</p>
+                    <span class="tag-light">INGENIERÍA</span>
+                </div>
+            </div>
 
-        <div class="card">
-            <img src="airlok 1.jpeg" alt="Manifold de oxígeno">
-            <h3>Mantenimiento e instalación de manifold de oxígeno</h3>
-            <p>
-                Instalación, mantenimiento y verificación de manifolds de oxígeno,
-                garantizando operación segura y cumplimiento de normas industriales
-                y medicinales.
-            </p>
+            <div class="card-premium">
+                <img src="logotipo 5.jpeg" alt="Tomas de oxigeno">
+                <div class="card-body">
+                    <h3>Tomas de Oxigeno</h3>
+                    <p>Instalación de tomas especializadas para puntos de consumo final en plantas industriales y hospitales.</p>
+                    <span class="tag-light">INSTALACIÓN</span>
+                </div>
+            </div>
+
+            <div class="card-premium">
+                <img src="foto 1.jpeg" alt="Mantenimiento Hermético">
+                <div class="card-body">
+                    <h3>Mantenimiento Hermético</h3>
+                    <p>Pruebas de hermeticidad y detección de fugas para optimizar el consumo de gas y evitar riesgos.</p>
+                    <span class="tag-light">MANTENIMIENTO</span>
+                </div>
+            </div>
+
+            <div class="card-premium">
+                <img src="airlok 2.jpeg" alt="Gases Criogénicos">
+                <div class="card-body">
+                    <h3>Gases Criogénicos</h3>
+                    <p>Instalación profesional de redes para gases criogénicos, garantizando eficiencia.</p>
+                    <span class="tag-light">ESPECIALIZADO</span>
+                </div>
+            </div>
+
+            <div class="card-premium">
+                <img src="soldadura.jpeg" alt="Tipos de Soldadura">
+                <div class="card-body">
+                    <h3>Tipos de Soldadura</h3>
+                    <p>Soldadura SMAW soldadura TIG soldadura AUTOGENA .</p>
+                    <span class="tag-light">ESPECIALIZADO</span>
+                </div>
+            </div>
+
+            <div class="card-premium">
+                <img src="Venta 1.jpeg" alt="Venta de Refacciones">
+                <div class="card-body">
+                    <h3>Venta de Refacciones</h3>
+                    <p>Equipos utilizados en el sector industrial y medicinal. Contamos con KITS DE REFACCIONES PARA TOMAS DE GASES:
+CUERPO CHECK / MODULO DE SERVICIO
+Y SALIDAS DE GAS .</p>
+                    <span class="tag-light">ESPECIALIZADO</span>
+                </div>
+            </div>
+
+
         </div>
-
-        <div class="card">
-            <img src="airlok 2.jpeg" alt="Redes de gases industriales y medicinales">
-            <h3>Instalación de redes de gases industriales y medicinales</h3>
-            <p>
-                Diseño e instalación de redes de oxígeno, CO₂, nitrógeno, argón y aire,
-                adaptadas a entornos industriales y médicos.
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="airlok 3.jpeg" alt="Tomas de gases">
-            <h3>Instalación de tomas de gases</h3>
-            <p>
-                Instalación de tomas de oxígeno, CO₂, nitrógeno, argón y aire,
-                cumpliendo estándares de seguridad y eficiencia operativa.
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="airlok 1.jpeg" alt="Mantenimiento hermético de redes de gases">
-            <h3>Mantenimiento hermético de redes de gases</h3>
-            <p>
-                Mantenimiento especializado para asegurar hermeticidad,
-                prevención de fugas y óptimo desempeño en redes de gases
-                industriales y medicinales.
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="airlok 1.jpeg" alt="Redes de gases criogénicos">
-            <h3>Instalación de redes de gases criogénicos</h3>
-            <p>
-                Instalación profesional de redes para gases criogénicos,
-                garantizando seguridad, eficiencia térmica y confiabilidad
-                en aplicaciones industriales.
-            </p>
-        </div>
-
     </div>
 </section>
+
+<script>
+    const hb = document.getElementById('hamburger');
+    const menu = document.getElementById('nav-menu');
+    hb.onclick = () => { hb.classList.toggle('active'); menu.classList.toggle('active'); };
+</script>
+
+<script>
+    // 1. Lógica del Menú Hamburguesa (Celulares)
+    const botonHamburguesa = document.getElementById('hamburger');
+    const menuNavegacion = document.getElementById('nav-menu');
+    
+    if (botonHamburguesa && menuNavegacion) {
+        botonHamburguesa.onclick = () => { 
+            botonHamburguesa.classList.toggle('active'); 
+            menuNavegacion.classList.toggle('active'); 
+        };
+    }
+
+    // 2. Lógica de las Animaciones (Que aparezca el contenido)
+    function animarElementos() {
+        let reveals = document.querySelectorAll(".reveal");
+        for (let i = 0; i < reveals.length; i++) {
+            let windowHeight = window.innerHeight;
+            let elementTop = reveals[i].getBoundingClientRect().top;
+            let elementVisible = 30; 
+            
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+    
+    // Escuchar cuando el usuario hace scroll
+    window.addEventListener("scroll", animarElementos);
+    
+    // Ejecutarlo inmediatamente al abrir la página
+    animarElementos(); 
+</script>
 
 </body>
 </html>

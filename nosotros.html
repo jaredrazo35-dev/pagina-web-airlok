@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airlok | Nosotros</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo-brand">
+            <img src="logotipo.jpeg" alt="Airlok Logo">
+            <div class="logo-text">
+                <span class="main-logo">AIRLOK</span>
+                <span class="sub-logo">TRANSFERENCIA DE GASES Y CRIOGÉNICOS E INDUSTRIALES</span>
+            </div>
+        </a>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="nosotros.html" class="nav-link active">Nosotros</a>
+            <a href="servicios.html" class="nav-link">Servicios</a>
+            <a href="contacto.html" class="nav-link">Contacto</a>
+            <a href="contacto.html" class="btn-nav">COTIZAR AHORA</a>
+        </div>
+    </div>
+</nav>
+
+<header class="page-banner">
+    <div class="banner-overlay"></div>
+    <div class="banner-content reveal">
+        <h1>Sobre <span class="text-accent">Nosotros</span></h1>
+        <p>Expertos en soluciones de ingeniería para gases industriales y medicinales.</p>
+    </div>
+</header>
+
+<section class="section-about">
+    <div class="about-grid container-services reveal">
+        <div class="about-text">
+            <h4 class="tagline-verde">NUESTRA IDENTIDAD</h4>
+            <h2>Compromiso con la <span class="text-accent">Excelencia Criogénica</span></h2>
+            <p>En <strong>Airlok</strong>, EMPRESA DEDICADA A LA INGENIERÍA, INSTALACIÓN Y SERVICIO DE MANTENIMIENTO DE REDES Y SISTEMAS PARA EL SUMINISTRO DE GASES ESPECIALES.
+            <div class="mision-vision-box">
+                <div class="mv-item">
+                    <strong>Nuestra Misión</strong>
+                    <p>Proveer soluciones de ingeniería de alta calidad que aseguren la continuidad operativa de nuestros clientes mediante sistemas de gases certificados.</p>
+                </div>
+                <div class="mv-item">
+                    <strong>Nuestra Visión</strong>
+                    <p>Ser el referente nacional en instalaciones criogénicas, destacando por nuestra innovación, seguridad y servicio técnico especializado.</p>
+                </div>
+            </div>
+        </div>
+        <div class="about-image">
+            <img src="logotipo 6.jpeg" alt="Equipo Airlok" class="img-rounded">
+        </div>
+    </div>
+</section>
+
+<section class="section-values">
+    <div class="container-services reveal">
+        <h2 style="text-align: center; margin-bottom: 50px;"> <span class="text-accent">CLIENTES</span></h2>
+        <div class="grid-services-premium">
+            
+            <div class="card-premium">
+                <div class="card-body">
+                    <span class="tag-light">CLIENTES</span>
+                    <h3>INDUSTRIAL</h3>
+                    <p>
+                        FORVIA HELLA México <br>
+                        Honda de México S.A. de C.V <br>
+                        INFRA <br>
+                        Hershey México, S.A. de C.V.<br>
+                        JABIL. <br>
+                        LIQUID CO2 JALISCO <br>
+                        EXEL AIR<br>
+                        RINOINOVATION SA DE CV<br>
+                        CRYOTAINER LNG <br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-premium">
+                <div class="card-body">
+                    <span class="tag-light">CLIENTES</span>
+                    <h3>MEDICINAL</h3>
+                    <p>
+                        Hospital Veterinario Arboledas.<br>
+                        Hospital St Joseph<br>
+                        HOSPITAL SAN FRANCISCO JAVIER MEMORIAL<br>
+                        Clinica SANEFRO®, Servicios Integrales de<br>
+                        Nefrología<br>
+                        HOSPIAL DIVINA PROVIDENCIA<br>
+                        Renal Care clínica de alta hemodiálisis<br>
+                        SESAJAL AMBULANCIAS<br>
+                        HOSPTIAL DE LA CRUZ<br>
+                        HOSPITAL DEL SAGRADO CORAZON<br>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    const botonHamburguesa = document.getElementById('hamburger');
+    const menuNavegacion = document.getElementById('nav-menu');
+    
+    if (botonHamburguesa && menuNavegacion) {
+        botonHamburguesa.onclick = () => { 
+            botonHamburguesa.classList.toggle('active'); 
+            menuNavegacion.classList.toggle('active'); 
+        };
+    }
+
+    function animarElementos() {
+        let reveals = document.querySelectorAll(".reveal");
+        for (let i = 0; i < reveals.length; i++) {
+            let windowHeight = window.innerHeight;
+            let elementTop = reveals[i].getBoundingClientRect().top;
+            let elementVisible = 30; 
+            
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", animarElementos);
+    animarElementos(); 
+</script>
+
+</body>
+</html>

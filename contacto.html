@@ -4,97 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airlok | Contacto</title>
-
-    <!-- CSS externo -->
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* ===== SOLO ESTILOS DE CONTACTO ===== */
-        body {
-            background: #f4f7fb;
-        }
-
-        .contacto {
-            max-width: 900px;
-            margin: 120px auto 80px;
-            padding: 40px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .contacto h1 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .datos {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .dato {
-            text-align: center;
-        }
-
-        .dato h3 {
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
-
 <body>
 
-<!-- ===== BARRA SUPERIOR (IGUAL A PORTADA) ===== -->
-<nav>
-    <div class="nav-contenedor">
-        <div class="logo">
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo-brand">
             <img src="logotipo.jpeg" alt="Airlok Logo">
-            <span>Airlok</span>
+            <div class="logo-text">
+                <span class="main-logo">AIRLOK</span>
+                <span class="sub-logo">TRANSFERENCIA DE GASES Y CRIOGÉNICOS E INDUSTRIALES</span>
+            </div>
+        </a>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
         </div>
-
-        <div class="menu">
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="contacto.html">Contacto</a>
+        <div class="nav-menu" id="nav-menu">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="nosotros.html" class="nav-link">Nosotros</a>
+            <a href="servicios.html" class="nav-link">Servicios</a>
+        
+            <a href="contacto.html" class="nav-link active">Contacto</a>
+            <a href="contacto.html" class="btn-nav">COTIZAR AHORA</a>
         </div>
     </div>
 </nav>
 
-<div class="espacio-menu"></div>
-
-<!-- ===== CONTACTO ===== -->
-<section class="contacto">
-    <h1>Contacto</h1>
-
-    <div class="datos">
-        <div class="dato">
-            <h3>📍 Dirección</h3>
-            <p>Apodaca, Nuevo León, México</p>
+<section class="contacto-premium">
+    <div class="contacto-grid">
+        
+        <div class="contacto-info reveal">
+            <h4 class="tagline-verde">ESTAMOS PARA AYUDARTE</h4>
+            <h2>¿Tienes un <span class="text-accent">Proyecto en Mente?</span></h2>
+            <p class="desc">Nuestro equipo de ingenieros está listo para asesorarte en tus necesidades de transferencia de gases.</p>
+            
+            <div class="contact-list">
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <div>
+                        <strong>Ubicación</strong>
+                        <p>Guadalara, Jalisco, México</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📞</span>
+                    <div>
+                        <strong>Teléfono de Atención</strong>
+                        <p>+52 (33) 3828 1292</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">✉️</span>
+                    <div>
+                        <strong>Email Corporativo</strong>
+                        <p>mgonzalez@airlok.com.mx</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="dato">
-            <h3>📞 Teléfono</h3>
-            <p>+52 (81) 2030 6952</p>
+        <div class="contacto-card-wrapper reveal">
+            <div class="dark-card">
+                <h3>Atención Inmediata</h3>
+                <p>Haz clic en el botón inferior para hablar directamente con un técnico vía WhatsApp.</p>
+                <a href="https://wa.me/5213338281292" class="btn-whatsapp-large" target="_blank">WHATSAPP DIRECTO</a>
+            </div>
         </div>
 
-        <div class="dato">
-            <h3>✉ Correo</h3>
-            <p>info@airlok.com</p>
-        </div>
     </div>
 </section>
 
-<!-- ===== BOTÓN WHATSAPP ===== -->
-<a href="https://wa.me/5213330693353"
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-         alt="WhatsApp">
-</a>
+<script>
+    const hb = document.getElementById('hamburger');
+    const menu = document.getElementById('nav-menu');
+    hb.onclick = () => { hb.classList.toggle('active'); menu.classList.toggle('active'); };
+</script>
+
+<script>
+    // 1. Lógica del Menú Hamburguesa (Celulares)
+    const botonHamburguesa = document.getElementById('hamburger');
+    const menuNavegacion = document.getElementById('nav-menu');
+    
+    if (botonHamburguesa && menuNavegacion) {
+        botonHamburguesa.onclick = () => { 
+            botonHamburguesa.classList.toggle('active'); 
+            menuNavegacion.classList.toggle('active'); 
+        };
+    }
+
+    // 2. Lógica de las Animaciones (Que aparezca el contenido)
+    function animarElementos() {
+        let reveals = document.querySelectorAll(".reveal");
+        for (let i = 0; i < reveals.length; i++) {
+            let windowHeight = window.innerHeight;
+            let elementTop = reveals[i].getBoundingClientRect().top;
+            let elementVisible = 30; 
+            
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+    
+    // Escuchar cuando el usuario hace scroll
+    window.addEventListener("scroll", animarElementos);
+    
+    // Ejecutarlo inmediatamente al abrir la página
+    animarElementos(); 
+</script>
 
 </body>
 </html>
